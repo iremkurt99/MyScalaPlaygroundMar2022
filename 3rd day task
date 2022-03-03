@@ -1,0 +1,9 @@
+import scala.io.StdIn.readLine
+
+object TaskOne extends App {
+    val yourName = readLine("Hello, what is your name? ")
+    val yourAge = readLine(s"Nice to meet you, $personName!. How old are you? ")
+    val year = 2022
+    val hundredYears = year - personAge.toInt + 99
+    println(s"So cool, you will be 100 years old in $hundredYears!")
+  }
