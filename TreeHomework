@@ -1,0 +1,19 @@
+import scala.io.StdIn.readLine
+
+object XTreeHomework extends App {
+  val name = readLine("Your Name: ")
+  val xtreeTall = Math.round(readLine("Enter tree height not greeter then 40: ").toInt)
+  
+   if (xtreeTall < 1 || xtreeTall > 41) println("Maximum height exceeded. Please enter tree height lower then 40")
+   
+  else {
+
+    def printTree(name: String, xtreeTall: Int, symbol: Char = '*', space: String = " ", max: Int = 40): Unit = {
+      println(space * xtreeTall + symbol)
+      for (n <- 1 until xtreeTall) println(space * (xtreeTall - n) + ((name * max) (n - 1)).toString * (n * 2 + 1))
+    }
+    
+    printTree(name, xtreeTall)
+  }
+  
+}
